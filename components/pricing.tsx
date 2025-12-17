@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
+import { Check, Sparkles } from "lucide-react";
 import Link from "next/link";
 
 const tiers = [
@@ -11,8 +11,8 @@ const tiers = [
       "Semantic search",
       "Local storage",
       "10,000 memories",
-      "Single tool",
-      "Privacy: data stays local",
+      "Single tool integration",
+      "Data stays on your machine",
     ],
     cta: "Get Started",
     href: "#install",
@@ -40,53 +40,88 @@ const tiers = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-24">
+    <section id="pricing" className="relative py-32 overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-b from-background to-secondary/10" />
+        {/* Subtle orb */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-brand-cyan/5 blur-[150px]" />
+      </div>
+
       <div className="container mx-auto px-4">
+        {/* Section header */}
         <div className="mx-auto max-w-2xl text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-            Simple, transparent pricing
+          <p className="text-sm font-medium text-brand-cyan mb-4 tracking-wider uppercase">
+            Pricing
+          </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            Simple, transparent{" "}
+            <span className="text-gradient-static">pricing</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Start free, upgrade when you need more power.
           </p>
         </div>
 
-        <div className="mx-auto grid max-w-4xl gap-8 lg:grid-cols-2">
+        {/* Pricing cards */}
+        <div className="mx-auto grid max-w-4xl gap-6 lg:grid-cols-2">
           {tiers.map((tier) => (
             <div
               key={tier.name}
-              className={`rounded-2xl border p-8 ${
-                tier.featured
-                  ? "border-primary bg-card shadow-lg ring-1 ring-primary"
-                  : "bg-card"
-              }`}
+              className={`
+                relative rounded-2xl p-8 lg:p-10 transition-all duration-300
+                ${tier.featured
+                  ? "bg-gradient-to-b from-card to-card/50 border-2 border-primary/50 glow-cyan"
+                  : "bg-card/50 border border-border/50 hover:border-border"
+                }
+              `}
             >
+              {/* Featured badge */}
               {tier.featured && (
-                <div className="mb-4 inline-block rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
-                  Most Popular
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                  <div className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-xs font-medium text-primary-foreground shadow-lg">
+                    <Sparkles className="h-3.5 w-3.5" />
+                    Most Popular
+                  </div>
                 </div>
               )}
-              <h3 className="text-2xl font-bold">{tier.name}</h3>
-              <div className="mt-4 flex items-baseline">
-                <span className="text-4xl font-bold tracking-tight">{tier.price}</span>
+
+              {/* Plan name */}
+              <h3 className="text-xl font-semibold text-foreground">{tier.name}</h3>
+
+              {/* Price */}
+              <div className="mt-4 flex items-baseline gap-1">
+                <span className={`text-5xl font-bold tracking-tight ${tier.featured ? "text-gradient-static" : "text-foreground"}`}>
+                  {tier.price}
+                </span>
                 {tier.period && (
-                  <span className="ml-1 text-muted-foreground">{tier.period}</span>
+                  <span className="text-muted-foreground">{tier.period}</span>
                 )}
               </div>
+
+              {/* Description */}
               <p className="mt-4 text-muted-foreground">{tier.description}</p>
 
-              <ul className="mt-8 space-y-3">
+              {/* Divider */}
+              <div className="my-8 h-px bg-border/50" />
+
+              {/* Features */}
+              <ul className="space-y-4">
                 {tier.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-3">
-                    <Check className="h-5 w-5 text-brand-success flex-shrink-0" />
-                    <span className="text-sm">{feature}</span>
+                  <li key={feature} className="flex items-start gap-3">
+                    <div className={`mt-0.5 rounded-full p-1 ${tier.featured ? "bg-brand-cyan/20" : "bg-secondary"}`}>
+                      <Check className={`h-3.5 w-3.5 ${tier.featured ? "text-brand-cyan" : "text-brand-emerald"}`} />
+                    </div>
+                    <span className="text-sm text-foreground/80">{feature}</span>
                   </li>
                 ))}
               </ul>
 
+              {/* CTA */}
               <Button
-                className="mt-8 w-full"
+                className={`mt-8 w-full ${tier.featured ? "glow-cyan" : ""}`}
                 variant={tier.featured ? "default" : "outline"}
+                size="lg"
                 asChild
               >
                 <Link href={tier.href}>{tier.cta}</Link>
@@ -94,6 +129,11 @@ export function Pricing() {
             </div>
           ))}
         </div>
+
+        {/* Bottom note */}
+        <p className="mt-12 text-center text-sm text-muted-foreground">
+          All plans include access to our Discord community and documentation.
+        </p>
       </div>
     </section>
   );
