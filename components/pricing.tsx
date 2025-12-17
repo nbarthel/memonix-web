@@ -6,7 +6,7 @@ const tiers = [
   {
     name: "Free",
     price: "$0",
-    description: "Perfect for trying StrataMind or privacy-sensitive work.",
+    description: "Perfect for trying Memonix or privacy-sensitive work.",
     features: [
       "Semantic search",
       "Local storage",

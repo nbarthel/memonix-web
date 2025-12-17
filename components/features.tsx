@@ -71,7 +71,7 @@ export function Features() {
             <span className="text-gradient-static">remember</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Stop repeating yourself. StrataMind gives your AI assistant the context it needs.
+            Stop repeating yourself. Memonix gives your AI assistant the context it needs.
           </p>
         </div>
 

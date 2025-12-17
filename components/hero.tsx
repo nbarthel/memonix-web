@@ -93,7 +93,7 @@ export function Hero() {
                     <span className="text-brand-purple">$</span>{" "}
                     <span className="text-brand-cyan">claude</span>{" "}
                     <span className="text-muted-foreground">plugin install</span>{" "}
-                    <span className="text-brand-emerald">stratamind</span>
+                    <span className="text-brand-emerald">memonix</span>
                   </code>
                 </div>
               </div>

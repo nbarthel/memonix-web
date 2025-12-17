@@ -1,6 +1,6 @@
-# StrataMind Website
+# Memonix Website
 
-Marketing website for StrataMind — [stratamind.dev](https://stratamind.dev)
+Marketing website for Memonix — [memonix.dev](https://memonix.dev)
 
 ## Tech Stack
 
@@ -26,11 +26,11 @@ npm run build
 
 | Color | Hex | Usage |
 |-------|-----|-------|
-| Primary | `#1E40AF` | CTAs, links, primary actions |
-| Secondary | `#334155` | Text, headers |
-| Accent | `#06B6D4` | Highlights, gradients |
-| Success | `#10B981` | Success states, Pro badges |
-| Background | `#F8FAFC` | Page backgrounds |
+| Cyan | `#0EA5E9` | Primary, CTAs, glow effects |
+| Purple | `#8B5CF6` | Accent, gradients |
+| Emerald | `#10B981` | Success states, highlights |
+| Amber | `#F59E0B` | Warnings, secondary accent |
+| Background | `#0B1121` | Deep space dark background |
 
 ## Deployment
 

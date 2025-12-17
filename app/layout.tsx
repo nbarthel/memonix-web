@@ -5,20 +5,20 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "StrataMind - Memory that learns",
+  title: "Memonix - Memory that learns",
   description: "Persistent, trainable memory for AI coding assistants. Give your AI the context it needs.",
   keywords: ["AI", "memory", "Claude Code", "Cursor", "coding assistant", "context"],
-  authors: [{ name: "StrataMind" }],
+  authors: [{ name: "Memonix" }],
   openGraph: {
-    title: "StrataMind - Memory that learns",
+    title: "Memonix - Memory that learns",
     description: "Persistent, trainable memory for AI coding assistants.",
-    url: "https://stratamind.dev",
-    siteName: "StrataMind",
+    url: "https://memonix.dev",
+    siteName: "Memonix",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "StrataMind - Memory that learns",
+    title: "Memonix - Memory that learns",
     description: "Persistent, trainable memory for AI coding assistants.",
   },
 };

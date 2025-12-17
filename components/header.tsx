@@ -12,12 +12,12 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="group flex items-center gap-2.5">
           <div className="relative flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-brand-cyan to-brand-purple shadow-lg shadow-brand-cyan/20">
-            <span className="text-lg font-bold text-white">S</span>
+            <span className="text-lg font-bold text-white">M</span>
             {/* Glow on hover */}
             <div className="absolute inset-0 rounded-lg bg-brand-cyan/20 opacity-0 blur-md transition-opacity group-hover:opacity-100" />
           </div>
           <span className="text-xl font-semibold text-foreground">
-            Strata<span className="text-gradient-static">Mind</span>
+            Memo<span className="text-gradient-static">nix</span>
           </span>
         </Link>
 
@@ -36,7 +36,7 @@ export function Header() {
             Pricing
           </Link>
           <Link
-            href="https://docs.stratamind.dev"
+            href="https://docs.memonix.dev"
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             Docs
@@ -51,7 +51,7 @@ export function Header() {
             className="hidden sm:inline-flex text-muted-foreground hover:text-foreground"
             asChild
           >
-            <Link href="https://github.com/stratamind/stratamind" className="gap-2">
+            <Link href="https://github.com/memonix/memonix" className="gap-2">
               <Github className="h-4 w-4" />
               GitHub
             </Link>

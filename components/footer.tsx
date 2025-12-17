@@ -5,13 +5,13 @@ const footerLinks = {
   product: [
     { label: "Features", href: "#features" },
     { label: "Pricing", href: "#pricing" },
-    { label: "Documentation", href: "https://docs.stratamind.dev" },
+    { label: "Documentation", href: "https://docs.memonix.dev" },
     { label: "Changelog", href: "/changelog" },
   ],
   resources: [
-    { label: "Getting Started", href: "https://docs.stratamind.dev/getting-started" },
-    { label: "GitHub", href: "https://github.com/stratamind/stratamind" },
-    { label: "Discord", href: "https://discord.gg/stratamind" },
+    { label: "Getting Started", href: "https://docs.memonix.dev/getting-started" },
+    { label: "GitHub", href: "https://github.com/memonix/memonix" },
+    { label: "Discord", href: "https://discord.gg/memonix" },
     { label: "Blog", href: "/blog" },
   ],
   legal: [
@@ -32,10 +32,10 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="group inline-flex items-center gap-2.5">
               <div className="relative flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-brand-cyan to-brand-purple shadow-lg shadow-brand-cyan/20">
-                <span className="text-lg font-bold text-white">S</span>
+                <span className="text-lg font-bold text-white">M</span>
               </div>
               <span className="text-xl font-semibold text-foreground">
-                Strata<span className="text-gradient-static">Mind</span>
+                Memo<span className="text-gradient-static">nix</span>
               </span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-xs">
@@ -43,19 +43,19 @@ export function Footer() {
             </p>
             <div className="mt-6 flex gap-4">
               <Link
-                href="https://github.com/stratamind"
+                href="https://github.com/memonix"
                 className="group flex h-9 w-9 items-center justify-center rounded-lg bg-secondary/50 border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/30 transition-all"
               >
                 <Github className="h-4 w-4" />
               </Link>
               <Link
-                href="https://twitter.com/stratamind"
+                href="https://twitter.com/memonix"
                 className="group flex h-9 w-9 items-center justify-center rounded-lg bg-secondary/50 border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/30 transition-all"
               >
                 <Twitter className="h-4 w-4" />
               </Link>
               <Link
-                href="https://discord.gg/stratamind"
+                href="https://discord.gg/memonix"
                 className="group flex h-9 w-9 items-center justify-center rounded-lg bg-secondary/50 border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/30 transition-all"
               >
                 <Disc className="h-4 w-4" />
@@ -119,7 +119,7 @@ export function Footer() {
         <div className="mt-16 pt-8 border-t border-border/40">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              &copy; {new Date().getFullYear()} StrataMind. All rights reserved.
+              &copy; {new Date().getFullYear()} Memonix. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground/60">
               Built for developers who demand more from their AI.
