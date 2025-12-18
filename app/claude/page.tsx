@@ -1,0 +1,186 @@
+import Link from "next/link";
+import { Metadata } from "next";
+import { ArrowRight, Terminal, CheckCircle, Zap, Brain, Lock, RefreshCw } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+
+export const metadata: Metadata = {
+  title: "Memonix for Claude Code - Memory that learns",
+  description: "Give Claude Code persistent memory that improves over time. Install in seconds.",
+  openGraph: {
+    title: "Memonix for Claude Code",
+    description: "Give Claude Code persistent memory that improves over time.",
+  },
+};
+
+const features = [
+  {
+    icon: Brain,
+    title: "Context that persists",
+    description: "Your project details, preferences, and decisions survive between sessions.",
+  },
+  {
+    icon: Zap,
+    title: "Instant recall",
+    description: "Claude automatically retrieves relevant context when you need it.",
+  },
+  {
+    icon: Lock,
+    title: "Privacy first",
+    description: "Free tier runs 100% locally. Your data stays on your machine.",
+  },
+  {
+    icon: RefreshCw,
+    title: "Learns over time",
+    description: "Memories strengthen based on usage, surfacing what matters most.",
+  },
+];
+
+const useCases = [
+  "Remember coding preferences (TypeScript over JavaScript, tabs vs spaces)",
+  "Store project architecture decisions for consistency",
+  "Keep track of API patterns and conventions",
+  "Save debugging approaches that worked before",
+  "Maintain context about your codebase structure",
+];
+
+export default function ClaudePage() {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-1 pt-16">
+        {/* Hero */}
+        <section className="relative py-24 overflow-hidden">
+          <div className="absolute inset-0 -z-10">
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-secondary/20" />
+            <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-brand-teal/10 blur-[120px]" />
+            <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-brand-teal-dark/10 blur-[100px]" />
+          </div>
+
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-3xl text-center">
+              {/* Badge */}
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-teal/30 bg-brand-teal/10 px-4 py-2 text-sm">
+                <Terminal className="h-4 w-4 text-brand-teal" />
+                <span>Official Claude Code Plugin</span>
+              </div>
+
+              {/* Headline */}
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+                Give Claude Code{" "}
+                <span className="text-gradient-static">memory that learns</span>
+              </h1>
+
+              {/* Subheadline */}
+              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+                Stop repeating yourself. Memonix remembers your preferences, project context,
+                and past decisions—so Claude can help you better.
+              </p>
+
+              {/* Install command */}
+              <div className="max-w-md mx-auto mb-8">
+                <div className="rounded-xl border border-border bg-card p-4">
+                  <p className="text-sm text-muted-foreground mb-2">Install in seconds:</p>
+                  <code className="block text-lg">
+                    <span className="text-brand-amber">$</span>{" "}
+                    <span className="text-brand-teal">claude</span>{" "}
+                    <span className="text-muted-foreground">plugin install</span>{" "}
+                    <span className="text-brand-emerald">memonix</span>
+                  </code>
+                </div>
+              </div>
+
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Button size="lg" className="glow-teal" asChild>
+                  <Link href="/docs/getting-started">
+                    Get Started Free
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button variant="outline" size="lg" asChild>
+                  <Link href="/docs">View Documentation</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features */}
+        <section className="py-24 bg-secondary/10">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-2xl text-center mb-16">
+              <h2 className="text-3xl font-bold mb-4">
+                Built for Claude Code
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Native integration via Model Context Protocol. Works seamlessly with your workflow.
+              </p>
+            </div>
+
+            <div className="mx-auto max-w-4xl grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {features.map((feature) => (
+                <div
+                  key={feature.title}
+                  className="rounded-xl border border-border bg-card/50 p-6"
+                >
+                  <feature.icon className="h-8 w-8 text-brand-teal mb-4" />
+                  <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-muted-foreground">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use cases */}
+        <section className="py-24">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-3xl">
+              <h2 className="text-3xl font-bold mb-4 text-center">
+                What can Memonix remember?
+              </h2>
+              <p className="text-lg text-muted-foreground text-center mb-12">
+                Anything that helps Claude help you better.
+              </p>
+
+              <div className="space-y-4">
+                {useCases.map((useCase, i) => (
+                  <div
+                    key={i}
+                    className="flex items-start gap-4 rounded-lg border border-border bg-card/50 p-4"
+                  >
+                    <CheckCircle className="h-5 w-5 text-brand-emerald shrink-0 mt-0.5" />
+                    <span>{useCase}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-24 bg-gradient-to-b from-secondary/10 to-background">
+          <div className="container mx-auto px-4">
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="text-3xl font-bold mb-4">
+                Ready to supercharge Claude Code?
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Install Memonix in under 2 minutes. Free tier includes 10,000 memories.
+              </p>
+              <Button size="lg" className="glow-teal" asChild>
+                <Link href="/docs/getting-started">
+                  Get Started Free
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+}

@@ -5,31 +5,31 @@ const features = [
     icon: Brain,
     title: "Learns Over Time",
     description: "Memory connections strengthen based on usage patterns, improving retrieval accuracy automatically.",
-    gradient: "from-brand-purple/20 to-brand-cyan/20",
-    iconColor: "text-brand-purple",
+    gradient: "from-brand-teal/20 to-brand-teal-dark/20",
+    iconColor: "text-brand-teal",
     size: "large",
   },
   {
     icon: Layers,
     title: "Persistent Context",
     description: "Your project knowledge, preferences, and decisions survive between sessions.",
-    gradient: "from-brand-cyan/20 to-brand-emerald/20",
-    iconColor: "text-brand-cyan",
+    gradient: "from-brand-teal-light/20 to-brand-emerald/20",
+    iconColor: "text-brand-teal-light",
     size: "normal",
   },
   {
     icon: Zap,
     title: "Instant Retrieval",
-    description: "Semantic search finds relevant context in milliseconds.",
-    gradient: "from-brand-amber/20 to-brand-purple/20",
-    iconColor: "text-brand-amber",
+    description: "Smart search finds what you need in milliseconds.",
+    gradient: "from-brand-emerald/20 to-brand-teal-light/20",
+    iconColor: "text-brand-emerald",
     size: "normal",
   },
   {
     icon: Lock,
     title: "Privacy First",
     description: "Free tier runs entirely local. Your data never leaves your machine unless you choose Pro.",
-    gradient: "from-brand-emerald/20 to-brand-cyan/20",
+    gradient: "from-brand-emerald/20 to-brand-teal/20",
     iconColor: "text-brand-emerald",
     size: "normal",
   },
@@ -37,16 +37,16 @@ const features = [
     icon: RefreshCw,
     title: "Cross-Tool Sync",
     description: "Same memories available in Claude Code, Cursor, and more. One brain, all tools.",
-    gradient: "from-brand-cyan/20 to-brand-purple/20",
-    iconColor: "text-brand-cyan",
+    gradient: "from-brand-teal/20 to-brand-teal-light/20",
+    iconColor: "text-brand-teal",
     size: "normal",
   },
   {
     icon: Cpu,
     title: "Built for Developers",
     description: "Native MCP integration. Works with your existing workflow.",
-    gradient: "from-brand-purple/20 to-brand-amber/20",
-    iconColor: "text-brand-purple",
+    gradient: "from-brand-teal-dark/20 to-brand-teal/20",
+    iconColor: "text-brand-teal-dark",
     size: "large",
   },
 ];
@@ -63,7 +63,7 @@ export function Features() {
       <div className="container mx-auto px-4">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center mb-20">
-          <p className="text-sm font-medium text-brand-cyan mb-4 tracking-wider uppercase">
+          <p className="text-sm font-medium text-brand-teal mb-4 tracking-wider uppercase">
             Features
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6">

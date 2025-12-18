@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Github, Twitter, Disc } from "lucide-react";
 
@@ -21,6 +23,8 @@ const footerLinks = {
 };
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="relative border-t border-border/40 bg-card/30">
       {/* Subtle gradient background */}
@@ -31,11 +35,16 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="group inline-flex items-center gap-2.5">
-              <div className="relative flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-brand-cyan to-brand-purple shadow-lg shadow-brand-cyan/20">
-                <span className="text-lg font-bold text-white">M</span>
+              <div className="relative flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-brand-teal to-brand-teal-dark shadow-lg shadow-brand-teal/20">
+                {/* Memory Layers */}
+                <div className="flex flex-col gap-[3px]">
+                  <div className="h-[3px] w-3 rounded-full bg-white/70" />
+                  <div className="h-[3px] w-4 rounded-full bg-white/85" />
+                  <div className="h-[3px] w-5 rounded-full bg-white/95" />
+                </div>
               </div>
               <span className="text-xl font-semibold text-foreground">
-                Memo<span className="text-gradient-static">nix</span>
+                memonix
               </span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-xs">
@@ -44,19 +53,22 @@ export function Footer() {
             <div className="mt-6 flex gap-4">
               <Link
                 href="https://github.com/memonix"
-                className="group flex h-9 w-9 items-center justify-center rounded-lg bg-secondary/50 border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/30 transition-all"
+                className="group flex h-9 w-9 items-center justify-center rounded-lg bg-secondary/50 border border-border/50 text-muted-foreground hover:text-foreground hover:border-brand-teal/30 transition-all"
+                aria-label="GitHub"
               >
                 <Github className="h-4 w-4" />
               </Link>
               <Link
                 href="https://twitter.com/memonix"
-                className="group flex h-9 w-9 items-center justify-center rounded-lg bg-secondary/50 border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/30 transition-all"
+                className="group flex h-9 w-9 items-center justify-center rounded-lg bg-secondary/50 border border-border/50 text-muted-foreground hover:text-foreground hover:border-brand-teal/30 transition-all"
+                aria-label="Twitter"
               >
                 <Twitter className="h-4 w-4" />
               </Link>
               <Link
                 href="https://discord.gg/memonix"
-                className="group flex h-9 w-9 items-center justify-center rounded-lg bg-secondary/50 border border-border/50 text-muted-foreground hover:text-foreground hover:border-primary/30 transition-all"
+                className="group flex h-9 w-9 items-center justify-center rounded-lg bg-secondary/50 border border-border/50 text-muted-foreground hover:text-foreground hover:border-brand-teal/30 transition-all"
+                aria-label="Discord"
               >
                 <Disc className="h-4 w-4" />
               </Link>
@@ -119,7 +131,7 @@ export function Footer() {
         <div className="mt-16 pt-8 border-t border-border/40">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              &copy; {new Date().getFullYear()} Memonix. All rights reserved.
+              &copy; {currentYear} Memonix. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground/60">
               Built for developers who demand more from their AI.

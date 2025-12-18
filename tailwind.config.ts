@@ -9,12 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Brand colors - Neural Strata palette
+        // Memonix brand colors - Teal + Amber palette
         brand: {
-          cyan: "#0EA5E9",
-          purple: "#8B5CF6",
+          teal: {
+            DEFAULT: "#14B8A6",
+            light: "#2DD4BF",
+            dark: "#0D9488",
+            darker: "#0F766E",
+          },
+          amber: {
+            DEFAULT: "#F59E0B",
+            light: "#FBBF24",
+            dark: "#D97706",
+          },
           emerald: "#10B981",
-          amber: "#F59E0B",
+          rose: "#F43F5E",
         },
         // shadcn/ui semantic colors - dark theme
         background: "hsl(var(--background))",

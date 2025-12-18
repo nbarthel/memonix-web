@@ -45,13 +45,13 @@ export function Pricing() {
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-background to-secondary/10" />
         {/* Subtle orb */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-brand-cyan/5 blur-[150px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-brand-teal/5 blur-[150px]" />
       </div>
 
       <div className="container mx-auto px-4">
         {/* Section header */}
         <div className="mx-auto max-w-2xl text-center mb-16">
-          <p className="text-sm font-medium text-brand-cyan mb-4 tracking-wider uppercase">
+          <p className="text-sm font-medium text-brand-teal mb-4 tracking-wider uppercase">
             Pricing
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
@@ -71,7 +71,7 @@ export function Pricing() {
               className={`
                 relative rounded-2xl p-8 lg:p-10 transition-all duration-300
                 ${tier.featured
-                  ? "bg-gradient-to-b from-card to-card/50 border-2 border-primary/50 glow-cyan"
+                  ? "bg-gradient-to-b from-card to-card/50 border-2 border-brand-teal/50 glow-teal"
                   : "bg-card/50 border border-border/50 hover:border-border"
                 }
               `}
@@ -109,8 +109,8 @@ export function Pricing() {
               <ul className="space-y-4">
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
-                    <div className={`mt-0.5 rounded-full p-1 ${tier.featured ? "bg-brand-cyan/20" : "bg-secondary"}`}>
-                      <Check className={`h-3.5 w-3.5 ${tier.featured ? "text-brand-cyan" : "text-brand-emerald"}`} />
+                    <div className={`mt-0.5 rounded-full p-1 ${tier.featured ? "bg-brand-teal/20" : "bg-secondary"}`}>
+                      <Check className={`h-3.5 w-3.5 ${tier.featured ? "text-brand-teal" : "text-brand-emerald"}`} />
                     </div>
                     <span className="text-sm text-foreground/80">{feature}</span>
                   </li>
@@ -119,7 +119,7 @@ export function Pricing() {
 
               {/* CTA */}
               <Button
-                className={`mt-8 w-full ${tier.featured ? "glow-cyan" : ""}`}
+                className={`mt-8 w-full ${tier.featured ? "glow-teal" : ""}`}
                 variant={tier.featured ? "default" : "outline"}
                 size="lg"
                 asChild
