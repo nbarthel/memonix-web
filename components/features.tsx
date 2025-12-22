@@ -35,8 +35,8 @@ const features = [
   },
   {
     icon: RefreshCw,
-    title: "Cross-Tool Sync",
-    description: "Same memories available in Claude Code, Cursor, and more. One brain, all tools.",
+    title: "Universal Compatibility",
+    description: "Works with Cursor, Windsurf, GitHub Copilot, Cline, Continue, and more. One extension, all AI tools.",
     gradient: "from-brand-teal/20 to-brand-teal-light/20",
     iconColor: "text-brand-teal",
     size: "normal",
@@ -71,7 +71,7 @@ export function Features() {
             <span className="text-gradient-static">remember</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Stop repeating yourself. Memonix gives your AI assistant the context it needs.
+            Stop repeating yourself. Memoist gives your AI assistant the context it needs.
           </p>
         </div>
 

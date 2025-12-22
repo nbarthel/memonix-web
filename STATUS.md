@@ -1,8 +1,8 @@
-# Memonix Dashboard - Implementation Status
+# Memoist Dashboard - Implementation Status
 
 ## ✅ Completed
 
-### Frontend (memonix-web)
+### Frontend (memoist-web)
 
 #### 1. Authentication System
 - ✅ Login page (`/login`) with email/password validation
@@ -22,7 +22,7 @@
 - ✅ Automatic token inclusion in requests
 - ✅ Comprehensive error handling
 - ✅ Console logging for debugging
-- ✅ Support for all memonix-cloud endpoints:
+- ✅ Support for all memoist-cloud endpoints:
   - `/auth/signup` - User registration
   - `/auth/signin` - User login
   - `/v1/memory` - Create memory
@@ -108,7 +108,7 @@ All pages are fully implemented with real API integration:
 - ✅ Claude session import support (for `.claude/` exports)
 
 #### 5. Design & UX
-- ✅ Consistent memonix brand colors (teal/emerald)
+- ✅ Consistent memoist brand colors (teal/emerald)
 - ✅ Responsive design (mobile-first)
 - ✅ Accessible forms
 - ✅ Loading states
@@ -117,17 +117,17 @@ All pages are fully implemented with real API integration:
 - ✅ Smooth transitions
 - ✅ Visual feedback (checkmarks, badges, etc.)
 
-### Backend (memonix-cloud)
+### Backend (memoist-cloud)
 
 #### 1. API Server
-- ✅ FastAPI application (`memonix/api/main.py`)
+- ✅ FastAPI application (`memoist/api/main.py`)
 - ✅ Running on port 8000
 - ✅ CORS configured for frontend
 - ✅ Error handling
 - ✅ Health check endpoint
 
 #### 2. Authentication
-- ✅ Supabase Auth integration (`memonix/api/routes/auth.py`)
+- ✅ Supabase Auth integration (`memoist/api/routes/auth.py`)
 - ✅ `/auth/signup` - User registration
 - ✅ `/auth/signin` - User login
 - ✅ JWT token generation
@@ -135,7 +135,7 @@ All pages are fully implemented with real API integration:
 - ✅ User context for RLS
 
 #### 3. Memory Operations
-- ✅ Memory routes (`memonix/api/routes/memory.py`)
+- ✅ Memory routes (`memoist/api/routes/memory.py`)
 - ✅ `/v1/memory` POST - Create memory
 - ✅ `/v1/memory/{id}` GET - Get memory
 - ✅ `/v1/memory/{id}` DELETE - Delete memory
@@ -151,7 +151,7 @@ All pages are fully implemented with real API integration:
 - ✅ Schema for nodes, edges, co-activations
 
 #### 5. Audit Logging System
-- ✅ **Comprehensive operation tracking** ([AUDIT_LOGGING.md](../memonix-cloud/AUDIT_LOGGING.md))
+- ✅ **Comprehensive operation tracking** ([AUDIT_LOGGING.md](../memoist-cloud/AUDIT_LOGGING.md))
 - ✅ **Audit log table** with performance and recall metrics
 - ✅ **Materialized views** for aggregated analytics:
   - `audit_performance_metrics` - Performance by operation type
@@ -183,7 +183,7 @@ All pages are fully implemented with real API integration:
   - Error type and message
   - Stack traces for debugging
   - Execution time before failure
-- ✅ **Audit API endpoints** ([audit.py](../memonix-cloud/memonix/api/routes/audit.py)):
+- ✅ **Audit API endpoints** ([audit.py](../memoist-cloud/memoist/api/routes/audit.py)):
   - `/v1/audit/logs` - Get filtered audit logs
   - `/v1/audit/logs/recent` - Get recent operations
   - `/v1/audit/metrics/performance` - Performance metrics by operation type
@@ -246,13 +246,13 @@ All pages are fully implemented with real API integration:
 
 1. **Start Backend** (if not running):
    ```bash
-   cd /home/nbarthel/ai/memonix/memonix-cloud
-   python -m uvicorn memonix.api.main:app --host 0.0.0.0 --port 8000 --reload
+   cd /home/nbarthel/ai/memoist/memoist-cloud
+   python -m uvicorn memoist.api.main:app --host 0.0.0.0 --port 8000 --reload
    ```
 
 2. **Start Frontend** (already running on port 3002):
    ```bash
-   cd /home/nbarthel/ai/memonix/memonix-web
+   cd /home/nbarthel/ai/memoist/memoist-web
    npm run dev
    ```
 
@@ -339,9 +339,9 @@ curl http://localhost:8000/v1/stats \
 1. ✅ **Query endpoint 500 error when fetching memories** (Fixed 2024-12-17)
    - **Issue**: When loading `/dashboard/memories`, the query endpoint returned 500 error with "could not convert string to float"
    - **Root Cause**: Supabase returns embeddings as JSON strings `'[0,0,0,...]'` but the backend was trying to convert them directly to numpy arrays
-   - **Fix**: Updated [supabase_backend.py:806](../memonix-cloud/memonix/graph/supabase_backend.py#L806) to parse JSON strings before converting to numpy arrays
+   - **Fix**: Updated [supabase_backend.py:806](../memoist-cloud/memoist/graph/supabase_backend.py#L806) to parse JSON strings before converting to numpy arrays
    - **Files Modified**:
-     - `/home/nbarthel/ai/memonix/memonix-cloud/memonix/graph/supabase_backend.py` - Added JSON parsing for embedding strings
+     - `/home/nbarthel/ai/memoist/memoist-cloud/memoist/graph/supabase_backend.py` - Added JSON parsing for embedding strings
 
 ## 📚 Documentation
 
@@ -351,7 +351,7 @@ curl http://localhost:8000/v1/stats \
 
 ## 🎨 Design Guidelines
 
-Following memonix brand guidelines:
+Following memoist brand guidelines:
 - **Primary**: Teal (#14B8A6)
 - **Secondary**: Emerald (#10B981)
 - **Accent**: Amber (#F59E0B) - used sparingly
@@ -361,7 +361,7 @@ Following memonix brand guidelines:
 
 ## ✅ Summary
 
-The memonix dashboard is **fully functional** and ready to use! Both the frontend and backend are working together correctly:
+The memoist dashboard is **fully functional** and ready to use! Both the frontend and backend are working together correctly:
 
 - Users can sign up and log in
 - Dashboard displays real data from Supabase

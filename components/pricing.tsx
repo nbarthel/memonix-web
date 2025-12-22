@@ -6,34 +6,39 @@ const tiers = [
   {
     name: "Free",
     price: "$0",
-    description: "Perfect for trying Memonix or privacy-sensitive work.",
+    description: "Perfect for trying Memoist or privacy-sensitive work.",
     features: [
-      "Semantic search",
-      "Local storage",
+      "9+ AI tools (Cursor, Copilot, Cline, etc.)",
       "10,000 memories",
-      "Single tool integration",
+      "Local storage (SQLite)",
+      "Semantic search & graph relationships",
+      "Terminal sync (.claude/memory.db)",
+      "Basic documentation indexing (5 sources)",
+      "Basic codebase search (50MB)",
       "Data stays on your machine",
     ],
-    cta: "Get Started",
+    cta: "Get Started Free",
     href: "#install",
     featured: false,
   },
   {
     name: "Pro",
-    price: "$19",
+    price: "$8",
     period: "/month",
-    description: "For power users who want the full experience.",
+    description: "For power users who need unlimited storage and cloud sync.",
     features: [
       "Everything in Free",
-      "Adaptive learning",
-      "Deep context retrieval",
-      "Intelligent ranking",
       "Unlimited memories",
-      "Cross-tool sync",
+      "Cloud sync across devices",
+      "Adaptive learning (memories get smarter)",
+      "Smart context assembly (auto-optimized)",
+      "Unlimited documentation sources",
+      "Multi-workspace codebase indexing (500MB)",
+      "Unlimited references",
       "Priority support",
     ],
     cta: "Upgrade to Pro",
-    href: "/upgrade",
+    href: "/signup",
     featured: true,
   },
 ];
@@ -130,8 +135,26 @@ export function Pricing() {
           ))}
         </div>
 
+        {/* Founder pricing callout */}
+        <div className="mt-12 mx-auto max-w-2xl">
+          <div className="rounded-xl border border-brand-teal/30 bg-brand-teal/5 p-6 text-center">
+            <div className="inline-flex items-center gap-2 mb-2">
+              <Sparkles className="h-5 w-5 text-brand-teal" />
+              <span className="text-sm font-semibold text-brand-teal uppercase tracking-wider">
+                Founder Pricing
+              </span>
+            </div>
+            <p className="text-lg font-medium text-foreground mb-2">
+              <span className="text-gradient-static">$6/month forever</span> for the first 500 Pro users
+            </p>
+            <p className="text-sm text-muted-foreground">
+              Lock in a 25% lifetime discount, get a "Founding Member" badge, and early access to new features.
+            </p>
+          </div>
+        </div>
+
         {/* Bottom note */}
-        <p className="mt-12 text-center text-sm text-muted-foreground">
+        <p className="mt-8 text-center text-sm text-muted-foreground">
           All plans include access to our Discord community and documentation.
         </p>
       </div>

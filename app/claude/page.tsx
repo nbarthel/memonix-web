@@ -6,10 +6,10 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Memonix for Claude Code - Memory that learns",
+  title: "Memoist for Claude Code - Memory that learns",
   description: "Give Claude Code persistent memory that improves over time. Install in seconds.",
   openGraph: {
-    title: "Memonix for Claude Code",
+    title: "Memoist for Claude Code",
     description: "Give Claude Code persistent memory that improves over time.",
   },
 };
@@ -74,7 +74,7 @@ export default function ClaudePage() {
 
               {/* Subheadline */}
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Stop repeating yourself. Memonix remembers your preferences, project context,
+                Stop repeating yourself. Memoist remembers your preferences, project context,
                 and past decisions—so Claude can help you better.
               </p>
 
@@ -86,7 +86,7 @@ export default function ClaudePage() {
                     <span className="text-brand-amber">$</span>{" "}
                     <span className="text-brand-teal">claude</span>{" "}
                     <span className="text-muted-foreground">plugin install</span>{" "}
-                    <span className="text-brand-emerald">memonix</span>
+                    <span className="text-brand-emerald">memoist</span>
                   </code>
                 </div>
               </div>
@@ -139,7 +139,7 @@ export default function ClaudePage() {
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl">
               <h2 className="text-3xl font-bold mb-4 text-center">
-                What can Memonix remember?
+                What can Memoist remember?
               </h2>
               <p className="text-lg text-muted-foreground text-center mb-12">
                 Anything that helps Claude help you better.
@@ -168,7 +168,7 @@ export default function ClaudePage() {
                 Ready to supercharge Claude Code?
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Install Memonix in under 2 minutes. Free tier includes 10,000 memories.
+                Install Memoist in under 2 minutes. Free tier includes 10,000 memories.
               </p>
               <Button size="lg" className="glow-teal" asChild>
                 <Link href="/docs/getting-started">

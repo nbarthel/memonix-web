@@ -94,7 +94,7 @@ export default function SignupPage() {
                     <div className="h-[2px] w-4 rounded-full bg-white/95" />
                   </div>
                 </div>
-                <h1 className="text-2xl font-bold text-foreground">memonix</h1>
+                <h1 className="text-2xl font-bold text-foreground">memoist</h1>
               </div>
               <p className="text-muted-foreground">
                 Create your account and start building persistent memory

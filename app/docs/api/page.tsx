@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import { Code, Database, Link as LinkIcon, BarChart3, Clock, Trash2, Cloud, User } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "API Reference - Memonix",
-  description: "Complete reference for all Memonix memory tools.",
+  title: "API Reference - Memoist",
+  description: "Complete reference for all Memoist memory tools.",
 };
 
 const tools = [
@@ -121,7 +121,7 @@ export default function ApiReferencePage() {
       <div>
         <h1 className="text-4xl font-bold tracking-tight mb-4">API Reference</h1>
         <p className="text-xl text-muted-foreground">
-          Complete reference for all Memonix memory tools.
+          Complete reference for all Memoist memory tools.
         </p>
       </div>
 

@@ -4,8 +4,8 @@ import { ArrowRight, Rocket, Book, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Documentation - Memonix",
-  description: "Learn how to use Memonix to give your AI assistant persistent memory.",
+  title: "Documentation - Memoist",
+  description: "Learn how to use Memoist to give your AI assistant persistent memory.",
 };
 
 const quickLinks = [
@@ -38,7 +38,7 @@ export default function DocsPage() {
       {/* Header */}
       <div>
         <h1 className="text-4xl font-bold tracking-tight mb-4">
-          Memonix Documentation
+          Memoist Documentation
         </h1>
         <p className="text-xl text-muted-foreground">
           Everything you need to give your AI assistant memory that learns and improves over time.
@@ -63,11 +63,11 @@ export default function DocsPage() {
         ))}
       </div>
 
-      {/* What is Memonix */}
+      {/* What is Memoist */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold">What is Memonix?</h2>
+        <h2 className="text-2xl font-bold">What is Memoist?</h2>
         <p className="text-muted-foreground leading-relaxed">
-          Memonix is a memory layer for AI coding assistants. It remembers your preferences,
+          Memoist is a memory layer for AI coding assistants. It remembers your preferences,
           project context, and past decisions—so you don&apos;t have to repeat yourself.
         </p>
         <p className="text-muted-foreground leading-relaxed">
@@ -103,7 +103,7 @@ export default function DocsPage() {
       <div className="rounded-xl border border-border/50 bg-gradient-to-br from-brand-teal/5 to-brand-teal-dark/5 p-8">
         <h3 className="text-xl font-semibold mb-2">Ready to get started?</h3>
         <p className="text-muted-foreground mb-4">
-          Install Memonix in under 2 minutes and give your AI assistant the memory it deserves.
+          Install Memoist in under 2 minutes and give your AI assistant the memory it deserves.
         </p>
         <Button asChild>
           <Link href="/docs/getting-started">

@@ -1,8 +1,8 @@
-# Memonix Memory Metadata Structure
+# Memoist Memory Metadata Structure
 
 ## Overview
 
-Every memory stored in Memonix must include specific metadata fields for proper multi-tenancy isolation, project/session association, and future team collaboration support.
+Every memory stored in Memoist must include specific metadata fields for proper multi-tenancy isolation, project/session association, and future team collaboration support.
 
 ## Required Fields
 
@@ -46,17 +46,17 @@ These fields enhance organization but are not required:
 - **Value**:
   - For Claude/Cursor: Derived from workspace path
   - For Dashboard: User-defined or auto-generated from project name
-- **Example**: `"project-memonix"` or `"proj-a1b2c3d4"`
+- **Example**: `"project-memoist"` or `"proj-a1b2c3d4"`
 
 ### `project_name` (string, optional)
 - **Purpose**: Human-readable project name
 - **Value**: Project display name
-- **Example**: `"Memonix Dashboard"`
+- **Example**: `"Memoist Dashboard"`
 
 ### `project_path` (string, optional)
 - **Purpose**: File system path to project (for IDE integrations)
 - **Value**: Absolute or relative path
-- **Example**: `"/home/user/projects/memonix"` or `"~/projects/memonix"`
+- **Example**: `"/home/user/projects/memoist"` or `"~/projects/memoist"`
 
 ### `session_name` (string, optional)
 - **Purpose**: Human-readable session name
@@ -89,9 +89,9 @@ These fields enhance organization but are not required:
     "session_start": "2024-12-17T14:30:00Z",
 
     // OPTIONAL FIELDS
-    "project_id": "project-memonix",
-    "project_name": "Memonix Dashboard",
-    "project_path": "/home/nbarthel/ai/memonix",
+    "project_id": "project-memoist",
+    "project_name": "Memoist Dashboard",
+    "project_path": "/home/nbarthel/ai/memoist",
     "session_name": "Dashboard Session Work",
     "source": "dashboard",
     "created_via": "web-ui"
@@ -185,9 +185,9 @@ await apiClient.createMemory(content, nodeType, importance, metadata);
 ### Claude MCP (Python)
 
 ```python
-from memonix import MemonixClient
+from memoist import MemoistClient
 
-client = MemonixClient()
+client = MemoistClient()
 
 # Memory with full metadata
 client.add_memory(

@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export function Hero() {
   const [copied, setCopied] = useState(false);
-  const installCommand = "claude plugin install memonix";
+  const installCommand = "claude plugin install memoist";
 
   const copyToClipboard = async () => {
     await navigator.clipboard.writeText(installCommand);
@@ -45,7 +45,7 @@ export function Hero() {
           {/* Badge */}
           <div className="fade-up-stagger stagger-1 mb-8 inline-flex items-center gap-2 rounded-full border border-brand-teal/20 bg-brand-teal/5 px-4 py-2 text-sm backdrop-blur-sm">
             <Sparkles className="h-4 w-4 text-brand-teal" />
-            <span className="text-muted-foreground">Now available for Claude Code</span>
+            <span className="text-muted-foreground">Now available for Claude Code & VS Code</span>
             <span className="h-1 w-1 rounded-full bg-brand-emerald animate-pulse" />
           </div>
 
@@ -63,7 +63,7 @@ export function Hero() {
           <p className="fade-up-stagger stagger-3 mx-auto max-w-2xl mb-10 text-lg sm:text-xl text-muted-foreground leading-relaxed">
             Give your AI coding assistant persistent memory that improves over time.
             <span className="block mt-2 text-foreground/70">
-              Context survives between sessions. Syncs across tools.
+              Works with Cursor, Windsurf, GitHub Copilot, Cline, Continue, and more.
             </span>
           </p>
 
@@ -105,7 +105,7 @@ export function Hero() {
                     <span className="text-brand-amber">$</span>{" "}
                     <span className="text-brand-teal">claude</span>{" "}
                     <span className="text-muted-foreground">plugin install</span>{" "}
-                    <span className="text-brand-emerald">memonix</span>
+                    <span className="text-brand-emerald">memoist</span>
                   </code>
                   <button
                     onClick={copyToClipboard}

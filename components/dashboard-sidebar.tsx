@@ -37,7 +37,7 @@ export function DashboardSidebar() {
             <div className="h-[2px] w-4 rounded-full bg-white/95" />
           </div>
         </div>
-        <span className="text-xl font-semibold text-foreground">memonix</span>
+        <span className="text-xl font-semibold text-foreground">memoist</span>
       </div>
 
       {/* Navigation */}

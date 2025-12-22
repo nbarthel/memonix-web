@@ -1,6 +1,6 @@
-# Memonix Website
+# Memoist Website
 
-Marketing website for Memonix — [memonix.dev](https://memonix.dev)
+Marketing website for Memoist — [memoist.dev](https://memoist.dev)
 
 ## Tech Stack
 

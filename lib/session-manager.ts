@@ -23,9 +23,9 @@
  */
 
 const SESSION_TIMEOUT_MS = 30 * 60 * 1000; // 30 minutes
-const SESSION_STORAGE_KEY = 'memonix_current_session';
-const LAST_ACTIVITY_KEY = 'memonix_last_activity';
-const PROJECT_STORAGE_KEY = 'memonix_current_project';
+const SESSION_STORAGE_KEY = 'memoist_current_session';
+const LAST_ACTIVITY_KEY = 'memoist_last_activity';
+const PROJECT_STORAGE_KEY = 'memoist_current_project';
 
 export interface Project {
   id: string;

@@ -4,8 +4,8 @@ import { Terminal, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Quick Start - Memonix",
-  description: "Get started with Memonix in under 2 minutes.",
+  title: "Quick Start - Memoist",
+  description: "Get started with Memoist in under 2 minutes.",
 };
 
 export default function GettingStartedPage() {
@@ -15,7 +15,7 @@ export default function GettingStartedPage() {
       <div>
         <h1 className="text-4xl font-bold tracking-tight mb-4">Quick Start</h1>
         <p className="text-xl text-muted-foreground">
-          Get Memonix running in under 2 minutes.
+          Get Memoist running in under 2 minutes.
         </p>
       </div>
 
@@ -42,7 +42,7 @@ export default function GettingStartedPage() {
                   <span className="text-brand-purple">$</span>{" "}
                   <span className="text-brand-cyan">claude</span>{" "}
                   <span className="text-muted-foreground">plugin install</span>{" "}
-                  <span className="text-brand-emerald">memonix</span>
+                  <span className="text-brand-emerald">memoist</span>
                 </code>
               </div>
             </div>
@@ -55,7 +55,7 @@ export default function GettingStartedPage() {
                   <span className="text-brand-purple">$</span>{" "}
                   <span className="text-brand-cyan">cursor</span>{" "}
                   <span className="text-muted-foreground">mcp install</span>{" "}
-                  <span className="text-brand-emerald">memonix</span>
+                  <span className="text-brand-emerald">memoist</span>
                 </code>
               </div>
             </div>
@@ -110,7 +110,7 @@ export default function GettingStartedPage() {
           </div>
           <div className="ml-11">
             <p className="text-muted-foreground mb-4">
-              Memonix automatically saves and retrieves relevant context. Your memories
+              Memoist automatically saves and retrieves relevant context. Your memories
               persist between sessions and improve over time.
             </p>
 

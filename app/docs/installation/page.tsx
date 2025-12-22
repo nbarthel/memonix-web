@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import { Terminal, Settings, Cloud } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Installation - Memonix",
-  description: "Install Memonix for Claude Code, Cursor, and other AI tools.",
+  title: "Installation - Memoist",
+  description: "Install Memoist for Claude Code, Cursor, and other AI tools.",
 };
 
 export default function InstallationPage() {
@@ -24,22 +24,22 @@ export default function InstallationPage() {
           Claude Code
         </h2>
         <p className="text-muted-foreground">
-          The recommended way to install Memonix with Claude Code.
+          The recommended way to install Memoist with Claude Code.
         </p>
 
         <div className="space-y-4">
           <div>
             <h3 className="font-semibold mb-2">Option 1: Plugin install (recommended)</h3>
             <div className="rounded-lg bg-card border border-border p-4">
-              <code className="text-sm">claude plugin install memonix</code>
+              <code className="text-sm">claude plugin install memoist</code>
             </div>
           </div>
 
           <div>
             <h3 className="font-semibold mb-2">Option 2: Manual MCP setup</h3>
             <div className="rounded-lg bg-card border border-border p-4 space-y-2">
-              <code className="block text-sm">pip install memonix-plugin</code>
-              <code className="block text-sm">claude mcp add memonix -- python -m memonix_plugin</code>
+              <code className="block text-sm">pip install memoist-plugin</code>
+              <code className="block text-sm">claude mcp add memoist -- python -m memoist_plugin</code>
             </div>
           </div>
         </div>
@@ -52,14 +52,14 @@ export default function InstallationPage() {
           Cursor
         </h2>
         <p className="text-muted-foreground">
-          Install Memonix as an MCP server in Cursor.
+          Install Memoist as an MCP server in Cursor.
         </p>
 
         <div className="space-y-4">
           <div>
             <h3 className="font-semibold mb-2">Option 1: MCP install</h3>
             <div className="rounded-lg bg-card border border-border p-4">
-              <code className="text-sm">cursor mcp install memonix</code>
+              <code className="text-sm">cursor mcp install memoist</code>
             </div>
           </div>
 
@@ -71,9 +71,9 @@ export default function InstallationPage() {
             <div className="rounded-lg bg-card border border-border p-4">
               <pre className="text-sm overflow-x-auto">{`{
   "mcpServers": {
-    "memonix": {
+    "memoist": {
       "command": "python",
-      "args": ["-m", "memonix_plugin"]
+      "args": ["-m", "memoist_plugin"]
     }
   }
 }`}</pre>
@@ -89,7 +89,7 @@ export default function InstallationPage() {
           Configuration
         </h2>
         <p className="text-muted-foreground">
-          Customize Memonix with environment variables.
+          Customize Memoist with environment variables.
         </p>
 
         <div className="rounded-lg border border-border overflow-hidden">
@@ -103,19 +103,19 @@ export default function InstallationPage() {
             </thead>
             <tbody className="divide-y divide-border">
               <tr>
-                <td className="p-3 font-mono text-brand-cyan">MEMONIX_API_KEY</td>
+                <td className="p-3 font-mono text-brand-cyan">MEMOIST_API_KEY</td>
                 <td className="p-3 text-muted-foreground">Pro API key for cloud features</td>
                 <td className="p-3 text-muted-foreground">—</td>
               </tr>
               <tr>
-                <td className="p-3 font-mono text-brand-cyan">MEMONIX_DB_PATH</td>
+                <td className="p-3 font-mono text-brand-cyan">MEMOIST_DB_PATH</td>
                 <td className="p-3 text-muted-foreground">Local database location</td>
                 <td className="p-3 font-mono text-xs">.claude/memory.db</td>
               </tr>
               <tr>
-                <td className="p-3 font-mono text-brand-cyan">MEMONIX_API_URL</td>
+                <td className="p-3 font-mono text-brand-cyan">MEMOIST_API_URL</td>
                 <td className="p-3 text-muted-foreground">Cloud API endpoint</td>
-                <td className="p-3 font-mono text-xs">https://api.memonix.dev</td>
+                <td className="p-3 font-mono text-xs">https://api.memoist.dev</td>
               </tr>
             </tbody>
           </table>
@@ -137,8 +137,8 @@ export default function InstallationPage() {
             <h3 className="font-semibold mb-2">1. Get your API key</h3>
             <p className="text-sm text-muted-foreground">
               Sign up at{" "}
-              <a href="https://memonix.dev/upgrade" className="text-brand-cyan hover:underline">
-                memonix.dev/upgrade
+              <a href="https://memoist.dev/upgrade" className="text-brand-cyan hover:underline">
+                memoist.dev/upgrade
               </a>
             </p>
           </div>
@@ -149,11 +149,11 @@ export default function InstallationPage() {
               <code className="block text-sm">
                 <span className="text-muted-foreground"># Option 1: Environment variable</span>
               </code>
-              <code className="block text-sm">export MEMONIX_API_KEY=sk-your-key-here</code>
+              <code className="block text-sm">export MEMOIST_API_KEY=sk-your-key-here</code>
               <code className="block text-sm mt-4">
                 <span className="text-muted-foreground"># Option 2: Claude Code config</span>
               </code>
-              <code className="block text-sm">claude config set MEMONIX_API_KEY sk-your-key-here</code>
+              <code className="block text-sm">claude config set MEMOIST_API_KEY sk-your-key-here</code>
             </div>
           </div>
 

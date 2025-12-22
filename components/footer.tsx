@@ -7,13 +7,13 @@ const footerLinks = {
   product: [
     { label: "Features", href: "#features" },
     { label: "Pricing", href: "#pricing" },
-    { label: "Documentation", href: "https://docs.memonix.dev" },
+    { label: "Documentation", href: "https://docs.memoist.dev" },
     { label: "Changelog", href: "/changelog" },
   ],
   resources: [
-    { label: "Getting Started", href: "https://docs.memonix.dev/getting-started" },
-    { label: "GitHub", href: "https://github.com/memonix/memonix" },
-    { label: "Discord", href: "https://discord.gg/memonix" },
+    { label: "Getting Started", href: "https://docs.memoist.dev/getting-started" },
+    { label: "GitHub", href: "https://github.com/memoist-ai/memoist" },
+    { label: "Discord", href: "https://discord.gg/memoist" },
     { label: "Blog", href: "/blog" },
   ],
   legal: [
@@ -44,7 +44,7 @@ export function Footer() {
                 </div>
               </div>
               <span className="text-xl font-semibold text-foreground">
-                memonix
+                memoist
               </span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-xs">
@@ -52,21 +52,21 @@ export function Footer() {
             </p>
             <div className="mt-6 flex gap-4">
               <Link
-                href="https://github.com/memonix"
+                href="https://github.com/memoist"
                 className="group flex h-9 w-9 items-center justify-center rounded-lg bg-secondary/50 border border-border/50 text-muted-foreground hover:text-foreground hover:border-brand-teal/30 transition-all"
                 aria-label="GitHub"
               >
                 <Github className="h-4 w-4" />
               </Link>
               <Link
-                href="https://twitter.com/memonix"
+                href="https://twitter.com/memoist"
                 className="group flex h-9 w-9 items-center justify-center rounded-lg bg-secondary/50 border border-border/50 text-muted-foreground hover:text-foreground hover:border-brand-teal/30 transition-all"
                 aria-label="Twitter"
               >
                 <Twitter className="h-4 w-4" />
               </Link>
               <Link
-                href="https://discord.gg/memonix"
+                href="https://discord.gg/memoist"
                 className="group flex h-9 w-9 items-center justify-center rounded-lg bg-secondary/50 border border-border/50 text-muted-foreground hover:text-foreground hover:border-brand-teal/30 transition-all"
                 aria-label="Discord"
               >
@@ -131,7 +131,7 @@ export function Footer() {
         <div className="mt-16 pt-8 border-t border-border/40">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              &copy; {currentYear} Memonix. All rights reserved.
+              &copy; {currentYear} Memoist. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground/60">
               Built for developers who demand more from their AI.

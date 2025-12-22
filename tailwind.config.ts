@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Memonix brand colors - Teal + Amber palette
+        // Memoist brand colors - Teal + Amber palette
         brand: {
           teal: {
             DEFAULT: "#14B8A6",

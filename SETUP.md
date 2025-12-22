@@ -1,11 +1,11 @@
-# Memonix Web Setup Guide
+# Memoist Web Setup Guide
 
-This guide will help you set up and run the Memonix web dashboard.
+This guide will help you set up and run the Memoist web dashboard.
 
 ## Prerequisites
 
 - Node.js 18+ installed
-- memonix-cloud backend running (see backend setup below)
+- memoist-cloud backend running (see backend setup below)
 - A modern web browser
 
 ## Quick Start
@@ -13,7 +13,7 @@ This guide will help you set up and run the Memonix web dashboard.
 ### 1. Install Dependencies
 
 ```bash
-cd memonix-web
+cd memoist-web
 npm install
 ```
 
@@ -25,7 +25,7 @@ Create a `.env.local` file in the root directory:
 NEXT_PUBLIC_API_URL=http://localhost:8000
 ```
 
-This tells the frontend where to find the memonix-cloud API backend.
+This tells the frontend where to find the memoist-cloud API backend.
 
 ### 3. Run the Development Server
 
@@ -35,13 +35,13 @@ npm run dev
 
 The app will be available at [http://localhost:3000](http://localhost:3000)
 
-## Backend Setup (memonix-cloud)
+## Backend Setup (memoist-cloud)
 
-**IMPORTANT**: The web dashboard requires the memonix-cloud API backend to be running.
+**IMPORTANT**: The web dashboard requires the memoist-cloud API backend to be running.
 
 ### Option 1: Using Existing Implementation (if available)
 
-If you already have memonix-cloud set up, make sure it's running on `localhost:8000`.
+If you already have memoist-cloud set up, make sure it's running on `localhost:8000`.
 
 ### Option 2: Mock Backend for Development
 
@@ -254,7 +254,7 @@ If you need to clear your authentication state:
 
 1. Open browser DevTools (F12)
 2. Go to Application tab → Local Storage
-3. Delete items starting with `memonix_`
+3. Delete items starting with `memoist_`
 4. Refresh the page
 
 ## Building for Production
@@ -270,7 +270,7 @@ This creates an optimized production build.
 
 | Variable | Required | Default | Description |
 |----------|----------|---------|-------------|
-| `NEXT_PUBLIC_API_URL` | Yes | `http://localhost:8000` | URL of the memonix-cloud API backend |
+| `NEXT_PUBLIC_API_URL` | Yes | `http://localhost:8000` | URL of the memoist-cloud API backend |
 
 **Note**: Variables prefixed with `NEXT_PUBLIC_` are exposed to the browser.
 
@@ -284,7 +284,7 @@ This creates an optimized production build.
 
 ## Next Steps
 
-- Set up the full memonix-cloud backend (see plan in `.claude/plans/`)
+- Set up the full memoist-cloud backend (see plan in `.claude/plans/`)
 - Deploy to production (Vercel for frontend, your choice for backend)
 - Configure production environment variables
 - Set up proper authentication flow with Supabase

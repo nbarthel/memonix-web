@@ -6,10 +6,10 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Memonix for Cursor - Memory that learns",
+  title: "Memoist for Cursor - Memory that learns",
   description: "Give Cursor persistent memory that improves over time. Install in seconds.",
   openGraph: {
-    title: "Memonix for Cursor",
+    title: "Memoist for Cursor",
     description: "Give Cursor persistent memory that improves over time.",
   },
 };
@@ -74,7 +74,7 @@ export default function CursorPage() {
 
               {/* Subheadline */}
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Stop repeating yourself. Memonix remembers your preferences, project context,
+                Stop repeating yourself. Memoist remembers your preferences, project context,
                 and past decisions—so Cursor can help you better.
               </p>
 
@@ -86,7 +86,7 @@ export default function CursorPage() {
                     <span className="text-brand-teal">$</span>{" "}
                     <span className="text-brand-amber">cursor</span>{" "}
                     <span className="text-muted-foreground">mcp install</span>{" "}
-                    <span className="text-brand-emerald">memonix</span>
+                    <span className="text-brand-emerald">memoist</span>
                   </code>
                 </div>
               </div>
@@ -139,7 +139,7 @@ export default function CursorPage() {
           <div className="container mx-auto px-4">
             <div className="mx-auto max-w-3xl">
               <h2 className="text-3xl font-bold mb-4 text-center">
-                What can Memonix remember?
+                What can Memoist remember?
               </h2>
               <p className="text-lg text-muted-foreground text-center mb-12">
                 Anything that helps Cursor help you better.
@@ -168,20 +168,20 @@ export default function CursorPage() {
                 Alternative: Manual Setup
               </h2>
               <p className="text-muted-foreground text-center mb-8">
-                Add Memonix to your Cursor MCP configuration:
+                Add Memoist to your Cursor MCP configuration:
               </p>
               <div className="rounded-xl border border-border bg-card p-6">
                 <pre className="text-sm overflow-x-auto">{`{
   "mcpServers": {
-    "memonix": {
+    "memoist": {
       "command": "python",
-      "args": ["-m", "memonix_plugin"]
+      "args": ["-m", "memoist_plugin"]
     }
   }
 }`}</pre>
               </div>
               <p className="text-sm text-muted-foreground text-center mt-4">
-                First install the plugin: <code className="text-brand-teal">pip install memonix-plugin</code>
+                First install the plugin: <code className="text-brand-teal">pip install memoist-plugin</code>
               </p>
             </div>
           </div>
@@ -195,7 +195,7 @@ export default function CursorPage() {
                 Ready to supercharge Cursor?
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Install Memonix in under 2 minutes. Free tier includes 10,000 memories.
+                Install Memoist in under 2 minutes. Free tier includes 10,000 memories.
               </p>
               <Button size="lg" className="glow-amber" asChild>
                 <Link href="/docs/getting-started">

@@ -38,7 +38,7 @@ export function Header() {
             <div className="absolute inset-0 rounded-lg bg-brand-teal/20 opacity-0 blur-md transition-opacity group-hover:opacity-100" />
           </div>
           <span className="text-xl font-semibold text-foreground">
-            memonix
+            memoist
           </span>
         </Link>
 
@@ -74,6 +74,12 @@ export function Header() {
           >
             Cursor
           </Link>
+          <Link
+            href="/vscode"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            VS Code
+          </Link>
         </nav>
 
         {/* Actions */}
@@ -84,7 +90,7 @@ export function Header() {
             className="hidden sm:inline-flex text-muted-foreground hover:text-foreground"
             asChild
           >
-            <Link href="https://github.com/memonix/memonix" className="gap-2">
+            <Link href="https://github.com/memoist-ai/memoist" className="gap-2">
               <Github className="h-4 w-4" />
               GitHub
             </Link>
@@ -188,6 +194,13 @@ export function Header() {
           >
             Cursor
           </Link>
+          <Link
+            href="/vscode"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-2"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            VS Code
+          </Link>
           <div className="pt-2 border-t border-border/40">
             <Button
               variant="ghost"
@@ -195,7 +208,7 @@ export function Header() {
               className="w-full justify-start text-muted-foreground hover:text-foreground"
               asChild
             >
-              <Link href="https://github.com/memonix/memonix" className="gap-2" onClick={() => setMobileMenuOpen(false)}>
+              <Link href="https://github.com/memoist-ai/memoist" className="gap-2" onClick={() => setMobileMenuOpen(false)}>
                 <Github className="h-4 w-4" />
                 GitHub
               </Link>

@@ -80,7 +80,7 @@ export default function LoginPage() {
                     <div className="h-[2px] w-4 rounded-full bg-white/95" />
                   </div>
                 </div>
-                <h1 className="text-2xl font-bold text-foreground">memonix</h1>
+                <h1 className="text-2xl font-bold text-foreground">memoist</h1>
               </div>
               <p className="text-muted-foreground">
                 Sign in to your account to access your memories

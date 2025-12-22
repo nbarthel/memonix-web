@@ -1,7 +1,7 @@
 /**
- * Memonix Cloud API Client
+ * Memoist Cloud API Client
  *
- * Connects to the memonix-cloud REST API for authenticated operations.
+ * Connects to the memoist-cloud REST API for authenticated operations.
  */
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
@@ -48,7 +48,7 @@ interface Stats {
   edge_types: Record<string, number>;
 }
 
-export class MemonixAPIClient {
+export class MemoistAPIClient {
   private baseURL: string;
 
   constructor(baseURL: string = API_URL) {
@@ -68,26 +68,26 @@ export class MemonixAPIClient {
 
   private getStoredToken(): string | null {
     if (typeof window === "undefined") return null;
-    return localStorage.getItem("memonix_access_token");
+    return localStorage.getItem("memoist_access_token");
   }
 
   private storeAuth(data: AuthResponse): void {
     if (typeof window === "undefined") return;
-    localStorage.setItem("memonix_access_token", data.access_token);
-    localStorage.setItem("memonix_refresh_token", data.refresh_token);
-    localStorage.setItem("memonix_user", JSON.stringify(data.user));
+    localStorage.setItem("memoist_access_token", data.access_token);
+    localStorage.setItem("memoist_refresh_token", data.refresh_token);
+    localStorage.setItem("memoist_user", JSON.stringify(data.user));
   }
 
   clearAuth(): void {
     if (typeof window === "undefined") return;
-    localStorage.removeItem("memonix_access_token");
-    localStorage.removeItem("memonix_refresh_token");
-    localStorage.removeItem("memonix_user");
+    localStorage.removeItem("memoist_access_token");
+    localStorage.removeItem("memoist_refresh_token");
+    localStorage.removeItem("memoist_user");
   }
 
   getStoredUser(): { id: string; email: string } | null {
     if (typeof window === "undefined") return null;
-    const userStr = localStorage.getItem("memonix_user");
+    const userStr = localStorage.getItem("memoist_user");
     return userStr ? JSON.parse(userStr) : null;
   }
 
@@ -316,4 +316,4 @@ export class MemonixAPIClient {
   }
 }
 
-export const apiClient = new MemonixAPIClient();
+export const apiClient = new MemoistAPIClient();

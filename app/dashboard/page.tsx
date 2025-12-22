@@ -149,13 +149,13 @@ export default function DashboardPage() {
             Connect with Claude Code
           </h3>
           <p className="text-sm text-muted-foreground mb-4">
-            Use the memonix plugin to sync your memories with Claude Code and other AI assistants.
+            Use the memoist plugin to sync your memories with Claude Code and other AI assistants.
           </p>
           <code className="block rounded-lg bg-background/80 px-4 py-3 font-mono text-sm text-foreground">
             <span className="text-brand-amber">$</span>{" "}
             <span className="text-brand-teal">claude</span>{" "}
             <span className="text-muted-foreground">plugin install</span>{" "}
-            <span className="text-brand-emerald">memonix</span>
+            <span className="text-brand-emerald">memoist</span>
           </code>
         </div>
       </div>
